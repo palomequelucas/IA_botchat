@@ -11,7 +11,12 @@ public class MiBot extends TelegramLongPollingBot {
     }
 
     public String getBotToken() {
-        return "KEY_DEL_BOT";
+        return "KEY_DEL_BOT_DE_TELEGRAM";
+    }
+
+    @Override
+    public void clearWebhook() {
+
     }
 
     public void onUpdateReceived(Update update) {

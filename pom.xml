@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
-    <!-- Nombre del proyecto -->
     <groupId>com.chatbot</groupId>
     <artifactId>chatbot_ia</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- Versión del compilador -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -19,27 +15,28 @@
 
     <dependencies>
 
-        <!-- 📌 Telegram Bots API -->
+        <!-- Telegram Bots (core) -->
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
-            <version>6.5.0</version>
+            <version>6.8.0</version>
         </dependency>
 
+        <!-- TelegramBotAPI (session handler) -->
         <dependency>
             <groupId>org.telegram</groupId>
-            <artifactId>telegrambots-extensions</artifactId>
-            <version>6.5.0</version>
+            <artifactId>telegrambots-meta</artifactId>
+            <version>6.8.0</version>
         </dependency>
 
-        <!-- 📌 OkHttp (para llamar a APIs externas tipo Grok/Llama/OpenAI) -->
+        <!-- OkHttp -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.12.0</version>
         </dependency>
 
-        <!-- 📌 JSON (org.json) -->
+        <!-- JSON -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -50,8 +47,6 @@
 
     <build>
         <plugins>
-
-            <!-- 📌 Plugin para compilar en Java 17 correctamente -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -61,7 +56,6 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
