@@ -37,3 +37,17 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# IntelliJ
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Build folders
+target/
+build/
+out/
+
+# Env files
+.env
